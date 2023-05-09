@@ -1,0 +1,160 @@
+.card {
+  width: 476px;
+  height: 190px;
+  box-sizing: border-box;
+
+  background: var(--soft-black);
+  border: 1px solid var(--true-black);
+  border-radius: 8px;
+  margin: 0px 24px 24px 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  font-family: "Aspekta";
+
+  cursor: pointer;
+}
+
+.card:hover {
+  background: var(--true-black);
+  transition: background-color 300ms linear;
+}
+
+.card:hover .card-footer-text {
+  color: var(--white);
+}
+
+.card:hover .chip {
+  background: var(--gray);
+  transition: background-color 300ms linear;
+}
+
+.card:hover .card-separator {
+  border: 1px solid #191b21;
+  transition: background-color 300ms linear;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-logo-container {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  height: 60px;
+  width: 60px;
+}
+
+.card-logo {
+  left: 0%;
+  right: 0%;
+  top: 24px;
+  bottom: 0%;
+  height: inherit;
+  width: inherit;
+  padding: 3px;
+  border: 2px solid var(--true-black);
+  border-radius: 50%;
+  background-color: var(--background);
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  position: absolute;
+  left: 100px;
+  top: 34px;
+  bottom: 71.58%;
+
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 20px;
+
+  letter-spacing: 0.02em;
+
+  color: var(--white);
+}
+
+.card-subtitle {
+  position: absolute;
+  left: 21.01%;
+  right: 71.85%;
+  top: 33.16%;
+  bottom: 60.53%;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+.card-chips {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  position: absolute;
+  width: 130px;
+  left: 21.01%;
+  top: 48.42%;
+  bottom: 37.89%;
+}
+
+.card-separator {
+  position: absolute;
+  left: 5.04%;
+  right: 5.04%;
+  top: 74.74%;
+  bottom: 25.26%;
+
+  border: 1px solid var(--true-black);
+}
+
+.card-footer {
+  position: absolute;
+  right: 5.04%;
+  top: 81.05%;
+  bottom: 6.32%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-footer-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+
+  text-align: right;
+  letter-spacing: 0.02em;
+
+  color: #8b909c;
+  padding-right: 8px;
+}
+
+.card-footer-container {
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-footer-logo {
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+}

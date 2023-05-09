@@ -1,0 +1,297 @@
+.filter-wrapper {
+  width: 975px;
+  height: 50px;
+  margin-top: 59px;
+  margin-bottom: 61px;
+
+}
+
+.filter-bar {
+  display: flex;
+  background: var(--soft-black);
+  border: 1px solid var(--true-black);
+  border-radius: 10000px;
+  font-family: "Aspekta";
+  font-style: normal;
+}
+
+.filter-info {
+  /* padding-left: 25px; */
+  text-align: center;
+  padding-top: 10px;
+  color: #818695;
+
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 23px;
+}
+
+.filter-clear {
+  padding: 0 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-container {
+  width: 475px;
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 25px;
+  border-radius: 10000px 0px 0px 10000px;
+}
+
+.search-container:hover,
+.search-input:hover {
+  background-color: var(--true-black);
+  transition: background-color 500ms linear;
+}
+
+.search-container:hover .search-input {
+  background-color: var(--true-black);
+  transition: background-color 500ms linear;
+}
+
+.search-container:hover .filter-img {
+  content: url(../../assets/images/search-icon-hover.svg);
+  /* transition: all 0.3s ease-in; */
+}
+
+.search-container:focus-within .filter-img,
+.filter-img:focus {
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+  filter: none;
+  border-radius: 50%;
+
+  margin-right: 10px;
+  content: url(../../assets/images/search-icon-focus.svg);
+  /* transition: all 0.3s ; */
+}
+
+.search-container:focus-within {
+  background-color: var(--true-black);
+  border-radius: 10000px 0px 0px 10000px;
+  cursor: pointer;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: var(--true-black);
+  caret-color: auto;
+}
+
+.search-input {
+  font-family: "Aspekta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+
+  left: 5.24%;
+  right: 21.83%;
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+
+  letter-spacing: 0.02em;
+
+  color: #818695;
+  background-color: var(--soft-black);
+
+  border: none;
+}
+
+.filter-img {
+  height: 34px;
+  width: 34px;
+  padding: 5px;
+  margin-right: 13px;
+  align-self: center;
+}
+
+.filter-specific {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+}
+
+.filter-btn:hover {
+  cursor: pointer;
+  background-color: var(--true-black);
+  transition: background-color 500ms linear;
+}
+
+.filter-btn:focus {
+  background-color: var(--true-black);
+  transition: background-color 500ms linear;
+}
+
+.filter-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 8px;
+
+  width: 171px;
+  height: 48px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  background-color: var(--soft-black);
+  border: none;
+  border-left: 1px solid var(--true-black);
+
+  color: var(--white);
+}
+
+.filter-btn:last-child {
+  border-radius: 0px 10000px 10000px 0px;
+}
+
+.filter-name {
+  font-family: "Aspekta";
+  font-size: 16px;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.filter-arrow {
+  pointer-events: none;
+}
+
+.filter-submenu {
+  background: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: none;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.filter-submenu::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--clr-white);
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.filter-submenu.show {
+  display: block;
+}
+
+.filter-submenu-center {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 21px;
+
+  background: var(--soft-black);
+  border: 1px solid var(--true-black);
+  border-radius: 8px;
+  font-family: "Aspekta";
+}
+
+.filter-count {
+  background-color: white;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  color: black;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+}
+
+.filter-count.active {
+  background-color: var(--orange);
+}
+
+.submenu-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+
+  color: var(--white);
+  flex-direction: row;
+  display: flex;
+}
+
+.submenu-item:hover {
+  cursor: pointer;
+}
+
+.submenu-item:hover .submenu-checkbox {
+  background-color: var(--true-black);
+}
+
+.submenu-checkbox {
+  background: var(--gray);
+  border: 1px solid var(--true-black);
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  appearance: none;
+}
+
+.submenu-checkbox:checked {
+  accent-color: var(--gray);
+}
+
+.submenu-checkbox:checked:before {
+  content: "\2713";
+  color: white;
+  padding: 6px;
+  font-weight: bold;
+  appearance: none;
+  line-height: 24px;
+}
+
+.submenu-icon-container {
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 9px;
+}
+
+.submenu-icon {
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+}

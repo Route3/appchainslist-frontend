@@ -1,0 +1,197 @@
+.sidebar {
+  box-sizing: border-box;
+  width: 345px;
+  height: 820px;
+  background: var(--soft-black);
+  border-right: 1px solid var(--true-black);
+}
+
+.logo {
+  position: absolute;
+  width: 224.89px;
+  height: 48.68px;
+  left: 60px;
+  top: 60px;
+}
+
+.sidebar-info-title {
+  width: 225px;
+  margin-bottom: 34px;
+  margin-left: 60px;
+
+  font-family: "Aspekta-bold";
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  color: var(--white);
+}
+
+.sidebar-info-text {
+  width: 225px;
+  height: 117px;
+  margin-left: 60px;
+
+  font-family: "Aspekta";
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  color: var(--white);
+}
+
+.sidebar-info-text a {
+  color: var(--orange);
+}
+
+.github-btn {
+  position: absolute;
+  width: 225px;
+  height: 50px;
+  left: 60px;
+  top: 660px;
+
+  background: var(--orange);
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.github-btn:hover {
+  background: radial-gradient(
+    70.22% 1422% at 0% 14%,
+    #feb482 0%,
+    #ee7c2f 45.83%,
+    #d96313 100%
+  );
+}
+
+.github-btn:active {
+  background: #cf5d10;
+}
+
+.github-logo {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.github-icon {
+  position: absolute;
+  left: 12.5%;
+  right: 12.08%;
+  top: 11px;
+  bottom: 13.75%;
+}
+
+.github-text {
+  position: absolute;
+  width: 122px;
+  height: 15px;
+  left: 70px;
+  top: 18px;
+
+  font-family: "Aspekta-bold";
+  font-size: 21px;
+  line-height: 15px;
+
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  color: var(--soft-black);
+
+  cursor: pointer;
+}
+
+.sidebar-footer-text {
+  position: absolute;
+  width: 225px;
+  height: 12px;
+  left: 60px;
+  top: 740px;
+
+  font-family: "Aspekta";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 23px;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--white);
+
+  text-decoration: none;
+}
+
+.slider {
+  position: absolute;
+  top: 300px;
+  width: 345px;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+}
+
+.slides {
+  display: flex;
+  overflow: hidden;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 345px;
+  height: 300px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  transition: all 300ms ease-in;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 100px;
+}
+
+.navigation {
+  display: inline-flex;
+  width: 13px;
+  height: 13px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 6px;
+  position: relative;
+}
+
+.navigation-btn {
+  background: var(--gray);
+  border: none;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  margin-right: 12px;
+  appearance: none;
+
+  cursor: pointer;
+}
+
+.navigation-btn:checked {
+  background: var(--white);
+  accent-color: var(--white);
+}

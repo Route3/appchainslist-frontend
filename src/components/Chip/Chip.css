@@ -1,0 +1,37 @@
+.chip {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  height: 26px;
+
+  background: var(--true-black);
+  border-radius: 23px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  cursor: pointer;
+}
+
+.chip-name {
+  height: 10px;
+
+  font-family: "Aspekta";
+  font-size: 14px;
+  line-height: 10px;
+  letter-spacing: 0.02em;
+
+  color: #818695;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.chip-name:hover {
+  color: white;
+  transition: color 300ms linear;
+}
