@@ -19,6 +19,7 @@ const InfoCard = (cardData) => {
     blockNumber,
     value,
     valueUpdated,
+    blockNumberUpdated,
     logo,
     blockExplorer,
     jsonRPC,
@@ -102,15 +103,22 @@ const InfoCard = (cardData) => {
               </div>
 
               <div className="info-description">
-                <p className="info-text">
-                  {readMore ? description : `${description.substring(0, 120)}...`}
-                  <button
-                    className="info-read-more-btn"
-                    onClick={() => setReadMore(!readMore)}
-                  >
-                    {readMore ? "show less" : "  read more"}
-                  </button>
-                </p>
+                {description.length > 120 &&
+                  <p className="info-text">
+                    {readMore ? description : `${description.substring(0, 120)}...`}
+                    <button
+                      className="info-read-more-btn"
+                      onClick={() => setReadMore(!readMore)}
+                    >
+                      {readMore ? "show less" : "  read more"}
+                    </button>
+                  </p>
+                }
+                {description.length <= 120 &&
+                  <p className="info-text">
+                    {description}
+                  </p>
+                }
                 <div className="info-chips">
                   {category?.map((data, index) => {
                     return (
@@ -191,7 +199,7 @@ const InfoCard = (cardData) => {
 
                     {jsonRPC &&
                     <div className="info-link-open">
-                      <a href={jsonRPC} target="_blank" rel="noreferrer">{jsonRPC.substring(0, jsonRPC.indexOf("/", 10))}</a>
+                      <a href={jsonRPC} target="_blank" rel="noreferrer">{jsonRPC}</a>
                       <button
                         className="copy-btn"
                         onClick={() => copyToClipboard(jsonRPC)}
@@ -206,12 +214,12 @@ const InfoCard = (cardData) => {
                     }
                   </div>
                 </div>
-                {valueUpdated &&
+                {(valueUpdated || blockNumberUpdated) &&
                 <div className="info-value-updated">
-                  Last updated {formatDate(valueUpdated)}
+                  Last updated {formatDate(valueUpdated || blockNumberUpdated)}
                 </div>
                 }
-                {!valueUpdated &&
+                {!(valueUpdated || blockNumberUpdated) &&
                 <div className="info-value-updated">
                   Last updated N/A
                 </div>

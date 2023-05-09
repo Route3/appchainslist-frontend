@@ -105,11 +105,6 @@ const AppProvider = ({ children }) => {
       keys: [
         "name",
         "shortName",
-        "blockExplorer",
-        "jsonRPC",
-        "description",
-        "value",
-        "valueUpdated",
       ],
     });
     const result = fuse.search(searchString);
